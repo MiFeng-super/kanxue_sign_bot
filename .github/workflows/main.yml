@@ -1,0 +1,31 @@
+name: Github JD-sign bot
+
+on:
+    push:
+        branches:
+            - master
+    workflow_dispatch:
+    schedule:
+        - cron: '30 21 * * *'     # 北京时间 5:30
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout codes
+              uses: actions/checkout@v2
+              with:
+                ref: 'master'
+                
+            - name: Install Node.js
+              uses: actions/setup-node@v1
+              with:
+                node-version: '12.x'
+                
+            - name: Run app
+              run: npm install
+              
+            - run: node app.js
+              env:
+                KANXUE_COOKIE: ${{ secrets.KANXUE_COOKIE }}
+                PUSH_KEY: ${{ secrets.PUSH_KEY }} 
