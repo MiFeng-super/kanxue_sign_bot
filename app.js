@@ -36,7 +36,7 @@ async function start()
         json: true,
         method: 'POST',
         headers: {
-            'User-Agent': 'Mozilla/5.0 (Linux; Android 11; Redmi Note 8 Pro Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36',
+            'User-Agent': 'HD1910(Android/7.1.2) (pediy.UNICFBC0DD/1.0.5) Weex/0.26.0 720x1280',
             'Cookie': cookie,
             'Connection': 'keep-alive',
             'Accept': '*/*'
