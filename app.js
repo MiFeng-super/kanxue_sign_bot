@@ -32,7 +32,7 @@ async function start()
         return;
     }
     const options = {
-        uri: `https://bbs.pediy.com/user-signin.htm`,
+        uri: `https://bbs.kanxue.com/bbs/app-signin.htm`,
         json: true,
         method: 'POST',
         headers: {
