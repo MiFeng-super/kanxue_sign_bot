@@ -1,6 +1,7 @@
 const rp = require('request-promise')
 
 const cookie  = process.env.KANXUE_COOKIE;
+const Authorization = process.env.AUTHORIZATION
 const serverJ = process.env.PUSH_KEY;
 
 async function sendMsg(text, desp)
@@ -32,14 +33,15 @@ async function start()
         return;
     }
     const options = {
-        uri: `https://bbs.kanxue.com/bbs/app-signin.htm`,
+        uri: `https://bbs.kanxue.com/app-signin.htm`,
         json: true,
         method: 'POST',
         headers: {
             'User-Agent': 'HD1910(Android/7.1.2) (pediy.UNICFBC0DD/1.0.5) Weex/0.26.0 720x1280',
             'Cookie': cookie,
             'Connection': 'keep-alive',
-            'Accept': '*/*'
+            'Accept': '*/*',
+            'Authorization': Authorization
         }
     }
     rp.post(options).then(res => {
