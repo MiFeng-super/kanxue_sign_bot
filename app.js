@@ -27,6 +27,10 @@ async function sendMsg(text, desp)
 
 async function start()
 {
+    console.log('cookie', cookie);
+    console.log('Authorization', Authorization);
+
+
     if (!cookie)
     {
         console.log('请填写 Cookie 后继续');
