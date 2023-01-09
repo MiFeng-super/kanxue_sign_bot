@@ -32,3 +32,4 @@ jobs:
               env:
                 KANXUE_COOKIE: ${{ secrets.KANXUE_COOKIE }}
                 PUSH_KEY: ${{ secrets.PUSH_KEY }} 
+                AUTHORIZATION: ${{ secrets.AUTHORIZATION }} 
